@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Conhecimentos from './page/Conhecimentos';
+import Contatos from './page/Contatos';
+import Home from './page/Home';
+import Projetos from './page/Projetos';
+import QuemSouEu from './page/QuemSouEu';
+import Modal from 'react-modal/lib/components/Modal';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <>
+        <Header />
+        <Home />
+        <section id='sobremim'><QuemSouEu/></section>
+        <section id='project' offset="50"><Projetos /></section>
+        <section id='skills'><Conhecimentos /></section>
+        <section id='contact'> <Contatos /></section>
+        <Footer />
+      </>
+    
   );
 }
 
 export default App;
+Modal.setAppElement("#root")

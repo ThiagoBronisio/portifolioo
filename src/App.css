@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --background-fundo: #1d2730;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.colorText {
+  color: #00BFA6;
+}
+
+body {
+  background-color: #0f1923
+}
+
+/* =============== FONTES FAMILY =============== */
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.jamjure {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.baloo {
+  font-family: 'Baloo 2', cursive;
+}
+
+/* ============ BOTÕES ============ */
+
+.buttonHome {
+  border-color: #00BFA6;
+  color: #00BFA6;
+}
+
+.buttonHome:hover {
+  color: #FFFF;
+  background-color: #00BFA6;
+  border-color: #00BFA6;
+}
+
+.buttonP {
+  border-color: #00BFA6;
+  background-color: transparent;
+  color: #00BFA6;
+  height: 40px;
+  width: 100%;
+}
+
+.buttonProjeto:hover {
+  color: #FFFF;
+  background-color: #00BFA6;
+  border-color: #00BFA6;
+}
+
+.buttonProjeto:focus {
+  color: #00BFA6;
+  background-color: #1d2730;
+  border-color: #00BFA6;
+}
+
+/*================== FIM ================== */
+
+
+
+/*============ INPUT MODAL ============ */
+.inputModal {
+  background-color: rgba(46, 49, 66, .5);
+  color: #FFFF;
+  border: 1.5px solid #323b45;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputModalF:focus {
+  background-color: #1d2730;
+  border: 1.5px solid #323b45;
+  box-shadow: none;
+}
+
+.inputModalH:hover {
+  background-color: #1d2730;
+  border: 1.5px solid #323b45;
+}
+
+/*================== FIM ================== */
+
+
+.noShadowBorder:focus {
+  box-shadow: none !important;
+  border-color: none !important;
+}
+
+.iconsConhecimentos {
+  width: 40px;
+  height: 50px;
+  padding: 10px, 10px, 10px, 10px;
+}
+
+.linha {
+  background-color: #FFFF;
+  padding: 0.3px;
+}
+
+
+
+.nav-linkk {
+  border-bottom: 3px solid #0f1923;
+  color: #5f6264;
+
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #00BFA6;
+  color: #FFFF;
+}
+
+.nav-link:focus {
+  border-bottom: 3px solid #00BFA6;
+  color: #FFFF;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 600ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* ============ Animação Header Menu ============ */
+.fade-in:hover {
+  -webkit-animation: fade-in 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    opacity: 1;
   }
 }
+
+.my-swal {
+  background:  #1d2730 !important;
+  border-radius: 5px !important;
+  color: white !important;
+  font-size: 20px;
+}
+.swal-icon--success__hide-corners {
+  background: none !important;
+  }
+  .swal-icon--success:before,
+  .swal-icon--success:after {
+  background: none !important;
+  }
