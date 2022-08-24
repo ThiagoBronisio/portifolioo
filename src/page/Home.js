@@ -2,20 +2,21 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import emailjs from "emailjs-com"
 import animationData from '../imagens/dev.json'
-import { FiUpload } from "react-icons/fi"
+import { FiDownload } from "react-icons/fi"
 import { IoIosSend } from "react-icons/io"
 import { AiOutlineClose } from "react-icons/ai"
 import { Controller, useForm } from 'react-hook-form';
 import { useState } from "react";
 import Modal from "react-modal"
 import Swal from "sweetalert2";
+import download from "../imagens/curriculo.pdf"
 
 
 
 /*======CUSTOMIZAÇÃO DO MODAL====== */
 const customStyles = {
     content: {
-        width: "450px",
+        width: "380px",
         height: "500px",
         backgroundColor: "#1d2730",
         borderRadius: "5px",
@@ -87,7 +88,7 @@ export default function Home() {
                     confirmButtonColor: "#157347",
                     timer: 3700,
                     customClass: { popup: 'my-swal' }
-                  })
+                })
                 console.log(result.text);
                 reset({
                     name: "",
@@ -106,7 +107,7 @@ export default function Home() {
 
         <main className='container'>
             <div className="row mt-5 mx-5">
-                <div className="col-lg-6 col-sm-12 col-md-12" style={{ paddingTop: "70px" }}>
+                <div className="col-lg-6 col-sm-12 col-md-12 pageHomeP">
                     <div className="mx-5-md">
                         <p className="text-light mb-0 jamjure text-center text-lg-start" style={{ fontSize: "25px" }}>Olá, meu nome é</p>
                         <p className="text-light mb-0 jamjure text-center text-lg-start" style={{ fontSize: "50px" }}>Thiago Bronisio</p>
@@ -115,16 +116,20 @@ export default function Home() {
                         <div className="row">
                             <div className='col-6'>
                                 <button className='btn btn-lg shadow-none jamjure w-100 buttonHome'
-                                        onClick={handleOpenModal}>
+                                    onClick={handleOpenModal}>
                                     Entrar em contato
-                                    
+
                                 </button>
                             </div>
                             <div className='col-6'>
-                                <button className='btn btn-lg shadow-none jamjure w-100 buttonHome'>
+
+                                <a className='btn btn-lg shadow-none jamjure w-100 buttonHome'
+                                    href={download} download="Curriculo.pdf">
+
                                     Baixar currículo
-                                    <FiUpload className='text-end mx-2 fs-4' />
-                                </button>
+                                    <FiDownload className='text-end mx-2 fs-4' />
+
+                                </a>
                             </div>
                             {/* 
                                 
@@ -179,7 +184,7 @@ export default function Home() {
                                 <form onSubmit={enviarEmail}>
 
                                     <div className='row justify-content-center d-flex mx-4'>
-                                        <div className='col-sm-12 col-lg-10'>
+                                        <div className='col-sm-12 col-lg-12'>
 
                                             <Controller
                                                 control={control}

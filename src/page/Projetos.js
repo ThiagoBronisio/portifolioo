@@ -85,7 +85,7 @@ export default function Projetos() {
                 <div className="card-body">
                     <h5 className="card-title mt-4 text-center jamjure">Agenda Web</h5>
                     <p>O projeto Agenda Web se trata de um CRUD de contatos, onde conseguimos fazer cadastros, consultas, edições e exclusões de contatos.</p>
-                    <a href="#" className="btn btn-primary w-100 buttonP buttonProjeto noShadowBorder mb-2">
+                    <a href="https://github.com/ThiagoBronisio/agenda-web" target="_blank" className="btn btn-primary w-100 buttonP buttonProjeto noShadowBorder mb-2">
                         Repositório
                         <SiGithub className=" mx-2 fs-3" />
                     </a>

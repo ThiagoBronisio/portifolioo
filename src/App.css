@@ -179,3 +179,12 @@ body {
   .swal-icon--success:after {
   background: none !important;
   }
+
+  .pageHomeP {
+    padding-top: 70px;
+  }
+  @media(max-width: 720px) {
+    .pageHomeP {
+      padding-top: 20px
+    }
+  }

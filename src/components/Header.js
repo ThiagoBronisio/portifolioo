@@ -12,12 +12,12 @@ var headerTH = {
 export default function Header() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg w-auto p-2 mx-5 w-100 ">
+            <nav className="navbar navbar-expand-lg w-auto p-2 mx-5 ">
                 <div className="container-fluid ">
                     
-                    <span className="">
+                    <span className="mx-auto">
                         <a className="colorText text-decoration-none fs-1">{headerTH.logo1}</a>
-                        <a className="navbar-brand text-light fs-2 jamjure" href="#"> {headerTH.nome}</a>
+                        <a className=" text-decoration-none text-light fs-2 jamjure">{headerTH.nome}</a>
                         <a className="colorText text-decoration-none fs-2">{headerTH.logo2}</a>
                     </span>
                     
